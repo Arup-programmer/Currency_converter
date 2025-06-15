@@ -182,8 +182,8 @@ function initializeCurrencyDropdowns() {
     for (let currency in country_code) {
       // Set default selections (USD for first dropdown, NPR for second)
       const isSelected =
-        (index === 0 && currency === "USD") ||
-        (index === 1 && currency === "NPR");
+        (index === 0 && currency === "INR") ||
+        (index === 1 && currency === "USD");
 
       const option = `<option value="${currency}" ${
         isSelected ? "selected" : ""
