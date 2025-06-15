@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #7d499d 0%, #695982 100%);
+    padding: 20px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 430px;
+    padding: 35px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.wrapper header {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: #1e3c72;
+    margin-bottom: 30px;
+}
+
+.wrapper form {
+    margin: 30px 0;
+}
+
+form :where(input, select, button) {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+form p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+form input {
+    height: 50px;
+    font-size: 16px;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+form input:focus {
+    border: 2px solid #1e3c72;
+    background: #fff;
+}
+
+form .drop-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.drop-list .select-box {
+    display: flex;
+    height: 45px;
+    width: 130px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.select-box:hover {
+    border-color: #1e3c72;
+}
+
+.select-box select {
+    width: auto;
+    font-size: 16px;
+    padding: 0 5px;
+    background: transparent;
+}
+
+.select-box img {
+    max-width: 25px;
+    margin-right: 8px;
+}
+
+.drop-list .icon {
+    cursor: pointer;
+    font-size: 22px;
+    margin: 0 15px;
+    color: #1e3c72;
+}
+
+form .exchange-rate {
+    font-size: 17px;
+    margin: 25px 0;
+    text-align: center;
+    color: #555;
+}
+
+form button {
+    height: 52px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    background: #1e3c72;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #5f2484;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .wrapper {
+        padding: 20px;
+    }
+
+    .wrapper header {
+        font-size: 24px;
+    }
+
+    .drop-list .select-box {
+        width: 115px;
+    }
+
+    form input,
+    form button {
+        height: 45px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .drop-list .select-box {
+        width: 100px;
+    }
+
+    .drop-list .icon {
+        margin: 0 10px;
+    }
+}
